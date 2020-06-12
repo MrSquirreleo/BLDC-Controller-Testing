@@ -6,6 +6,8 @@ P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-
                               ./SPIHandler.o (spi_initialize())
 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
                               ./SPIHandler.o (delayMicroseconds)
+P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+                              ./SPIHandler.o (analogRead)
 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
                               ./SPI_Testing_Script.o (pinMode)
 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
@@ -155,6 +157,10 @@ Discarded input sections
                 0x00000000       0x68 ./SPIHandler.o
  .text._ZN10SPIHandler10clearFaultEv
                 0x00000000       0x32 ./SPIHandler.o
+ .text._ZN10SPIHandler10setAmpGainEi
+                0x00000000       0x7c ./SPIHandler.o
+ .text._Z15calibrateDriverv
+                0x00000000       0x92 ./SPIHandler.o
  .data._pP3DIR  0x00000000        0x2 ./SPIHandler.o
  .data._pP3OUT  0x00000000        0x2 ./SPIHandler.o
  .bss._csaControl
@@ -171,6 +177,7 @@ Discarded input sections
                 0x00000000        0x2 ./SPIHandler.o
  .bss._faultStatus1
                 0x00000000        0x2 ./SPIHandler.o
+ .data._SOA     0x00000000        0x2 ./SPIHandler.o
  .data._CSDRV   0x00000000        0x2 ./SPIHandler.o
  .data._CSSD    0x00000000        0x2 ./SPIHandler.o
  .data._CSTemp  0x00000000        0x2 ./SPIHandler.o
@@ -209,6 +216,33 @@ Discarded input sections
  .text.sleep    0x00000000       0xde P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .text.suspend  0x00000000       0x26 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .bss.vlo_freq  0x00000000        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .text          0x00000000        0x0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .data          0x00000000        0x0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .bss           0x00000000        0x0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .text.analogReference
+                0x00000000        0x6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .text.analogFrequency
+                0x00000000       0x66 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .text.analogResolution
+                0x00000000        0x6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .text.analogWrite
+                0x00000000      0x4b6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .rodata.analogWrite
+                0x00000000       0x34 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .text.analogReadResolution
+                0x00000000        0x6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .text.analogRead
+                0x00000000      0x106 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .data.analog_res
+                0x00000000        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .bss.analog_div
+                0x00000000        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .data.analog_period
+                0x00000000        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .bss.analog_reference
+                0x00000000        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .data._readResolution
+                0x00000000        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
  .text          0x00000000        0x0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
  .data          0x00000000        0x0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
  .bss           0x00000000        0x0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
@@ -1487,7 +1521,7 @@ LOAD c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00004400      0xf84
+.text           0x00004400      0xf98
                 0x00004400                . = ALIGN (0x2)
  *(.init .init.*)
  *(.init0)
@@ -1553,7 +1587,6 @@ LOAD c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.
                 0x00004478                __isr_29
                 0x00004478                __isr_23
                 0x00004478                __isr_32
-                0x00004478                __isr_54
                 0x00004478                __isr_42
                 0x00004478                __isr_49
                 0x00004478                __isr_16
@@ -1647,149 +1680,153 @@ LOAD c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.
                 0x00004ab4       0x72 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
                 0x00004ab4                watchdog_isr
                 0x00004ab4                __isr_57
- .text.pinMode  0x00004b26       0x6e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00004b26                pinMode
+ .text.ADC12_ISR
+                0x00004b26       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+                0x00004b26                ADC12_ISR
+                0x00004b26                __isr_54
+ .text.pinMode  0x00004b3a       0x6e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00004b3a                pinMode
  .text.pinMode_int
-                0x00004b94       0xf6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00004b94                pinMode_int
+                0x00004ba8       0xf6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00004ba8                pinMode_int
  .text.digitalWrite
-                0x00004c8a       0x3e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00004c8a                digitalWrite
+                0x00004c9e       0x3e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00004c9e                digitalWrite
  .text._ZN14HardwareSerial9availableEv
-                0x00004cc8       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004cc8                HardwareSerial::available()
+                0x00004cdc       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004cdc                HardwareSerial::available()
  .text._ZN14HardwareSerial4peekEv
-                0x00004cda       0x1e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004cda                HardwareSerial::peek()
+                0x00004cee       0x1e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004cee                HardwareSerial::peek()
  .text._ZN14HardwareSerial4readEv
-                0x00004cf8       0x2c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004cf8                HardwareSerial::read()
+                0x00004d0c       0x2c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004d0c                HardwareSerial::read()
  .text._ZN14HardwareSerial5flushEv
-                0x00004d24       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004d24                HardwareSerial::flush()
+                0x00004d38       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004d38                HardwareSerial::flush()
  .text._ZN14HardwareSerial5writeEh
-                0x00004d36       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004d36                HardwareSerial::write(unsigned char)
+                0x00004d4a       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004d4a                HardwareSerial::write(unsigned char)
  .text._Z11serialEventv
-                0x00004d72        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004d72                serialEvent()
+                0x00004d86        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004d86                serialEvent()
  .text._Z12serialEvent1v
-                0x00004d74        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004d74                serialEvent1()
+                0x00004d88        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004d88                serialEvent1()
  .text._Z14serialEventRunv
-                0x00004d76       0x22 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004d76                serialEventRun()
+                0x00004d8a       0x22 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004d8a                serialEventRun()
  .text._ZN14HardwareSerial5beginEmh
-                0x00004d98      0x12e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004d98                HardwareSerial::begin(unsigned long, unsigned char)
+                0x00004dac      0x12e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004dac                HardwareSerial::begin(unsigned long, unsigned char)
  .text.uart_rx_isr
-                0x00004ec6       0x38 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004ec6                uart_rx_isr
+                0x00004eda       0x38 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004eda                uart_rx_isr
  .text.uart_tx_isr
-                0x00004efe       0x52 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00004efe                uart_tx_isr
+                0x00004f12       0x52 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004f12                uart_tx_isr
  .text.startup._GLOBAL__sub_I_rx_buffer
-                0x00004f50       0x8a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00004f64       0x8a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
  .text._ZN5Print5writeEPKhj
-                0x00004fda       0x22 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00004fda                Print::write(unsigned char const*, unsigned int)
+                0x00004fee       0x22 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00004fee                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5printEPKc
-                0x00004ffc       0x16 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00004ffc                Print::print(char const*)
+                0x00005010       0x16 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00005010                Print::print(char const*)
  .text._ZN5Print5printEc
-                0x00005012        0x6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00005012                Print::print(char)
+                0x00005026        0x6 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00005026                Print::print(char)
  .text._ZN5Print7printlnEv
-                0x00005018       0x1e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00005018                Print::println()
+                0x0000502c       0x1e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x0000502c                Print::println()
  .text._ZN5Print7printlnEPKc
-                0x00005036       0x16 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x00005036                Print::println(char const*)
+                0x0000504a       0x16 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x0000504a                Print::println(char const*)
  .text._ZN5Print11printNumberEmh
-                0x0000504c       0x8a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x0000504c                Print::printNumber(unsigned long, unsigned char)
+                0x00005060       0x8a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00005060                Print::printNumber(unsigned long, unsigned char)
  .text._ZN5Print5printEmi
-                0x000050d6       0x1c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x000050d6                Print::print(unsigned long, int)
+                0x000050ea       0x1c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x000050ea                Print::print(unsigned long, int)
  .text._ZN5Print5printEji
-                0x000050f2        0xc P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x000050f2                Print::print(unsigned int, int)
+                0x00005106        0xc P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00005106                Print::print(unsigned int, int)
  .text._ZN5Print7printlnEji
-                0x000050fe       0x16 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
-                0x000050fe                Print::println(unsigned int, int)
+                0x00005112       0x16 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00005112                Print::println(unsigned int, int)
  .text.usci_isr_install
-                0x00005114        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x00005114                usci_isr_install
+                0x00005128        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x00005128                usci_isr_install
  .text.i2c_state_isr
-                0x00005116        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x00005116                i2c_state_isr
+                0x0000512a        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000512a                i2c_state_isr
  .text.i2c_txrx_isr
-                0x0000511a        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000511a                i2c_txrx_isr
+                0x0000512e        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000512e                i2c_txrx_isr
  .text.spi_rx_isr
-                0x0000511e        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000511e                spi_rx_isr
+                0x00005132        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x00005132                spi_rx_isr
  .text.spi_tx_isr
-                0x00005120        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x00005120                spi_tx_isr
+                0x00005134        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x00005134                spi_tx_isr
  .text.USCIA0_ISR
-                0x00005122       0x38 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x00005122                __isr_56
-                0x00005122                USCIA0_ISR
+                0x00005136       0x38 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x00005136                __isr_56
+                0x00005136                USCIA0_ISR
  .text.USCIA1_ISR
-                0x0000515a       0x64 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x0000515a                USCIA1_ISR
-                0x0000515a                __isr_46
+                0x0000516e       0x64 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000516e                USCIA1_ISR
+                0x0000516e                __isr_46
  .text.USCIB0_ISR
-                0x000051be       0x54 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x000051be                USCIB0_ISR
-                0x000051be                __isr_55
+                0x000051d2       0x54 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x000051d2                USCIB0_ISR
+                0x000051d2                __isr_55
  .text.USCIB1_ISR
-                0x00005212       0x54 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
-                0x00005212                __isr_45
-                0x00005212                USCIB1_ISR
- .text.libgcc   0x00005266       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
-                0x00005266                __ext_udivmod32
-                0x00005266                __udivsi3
-                0x00005294                __umodsi3
- .text          0x0000529e       0xe4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
-                0x0000529e                memcpy
- .text.crt0     0x00005382        0x2 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
-                0x00005382                _unexpected_
-                0x00005384                . = ALIGN (0x2)
+                0x00005226       0x54 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x00005226                __isr_45
+                0x00005226                USCIB1_ISR
+ .text.libgcc   0x0000527a       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
+                0x0000527a                __ext_udivmod32
+                0x0000527a                __udivsi3
+                0x000052a8                __umodsi3
+ .text          0x000052b2       0xe4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+                0x000052b2                memcpy
+ .text.crt0     0x00005396        0x2 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
+                0x00005396                _unexpected_
+                0x00005398                . = ALIGN (0x2)
 
-.rodata         0x00005384       0xd4
-                0x00005384                . = ALIGN (0x2)
+.rodata         0x00005398       0xd4
+                0x00005398                . = ALIGN (0x2)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata.loop   0x00005384        0xc ./SPI_Testing_Script.o
+ .rodata.loop   0x00005398        0xc ./SPI_Testing_Script.o
  .rodata.digital_pin_to_bit_mask
-                0x00005390       0x2f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00005390                digital_pin_to_bit_mask
+                0x000053a4       0x2f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000053a4                digital_pin_to_bit_mask
  .rodata.digital_pin_to_port
-                0x000053bf       0x2f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x000053bf                digital_pin_to_port
+                0x000053d3       0x2f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000053d3                digital_pin_to_port
  .rodata.port_to_pmap
-                0x000053ee       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x000053ee                port_to_pmap
+                0x00005402       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00005402                port_to_pmap
  .rodata.port_to_sel0
-                0x00005400       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00005400                port_to_sel0
+                0x00005414       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00005414                port_to_sel0
  .rodata.port_to_ren
-                0x00005412       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00005412                port_to_ren
+                0x00005426       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00005426                port_to_ren
  .rodata.port_to_dir
-                0x00005424       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00005424                port_to_dir
+                0x00005438       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x00005438                port_to_dir
  .rodata.port_to_output
-                0x00005436       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
-                0x00005436                port_to_output
+                0x0000544a       0x12 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x0000544a                port_to_output
  .rodata._ZTV14HardwareSerial
-                0x00005448       0x10 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00005448                vtable for HardwareSerial
-                0x00005458                . = ALIGN (0x2)
-                0x00005458                _etext = .
+                0x0000545c       0x10 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000545c                vtable for HardwareSerial
+                0x0000546c                . = ALIGN (0x2)
+                0x0000546c                _etext = .
 
-.data           0x00002400        0xc load address 0x00005458
+.data           0x00002400        0xc load address 0x0000546c
                 0x00002400                . = ALIGN (0x2)
                 0x00002400                PROVIDE (__data_start, .)
  *(.data .data.* .gnu.linkonce.d.*)
@@ -1809,74 +1846,74 @@ LOAD c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.
                 0x0000240a                Enable
                 0x0000240c                . = ALIGN (0x2)
                 0x0000240c                _edata = .
-                0x00005458                PROVIDE (__data_load_start, LOADADDR (.data))
+                0x0000546c                PROVIDE (__data_load_start, LOADADDR (.data))
                 0x0000000c                PROVIDE (__data_size, SIZEOF (.data))
 
-.bss            0x0000240c       0xc2 load address 0x00005464
+.bss            0x0000240c       0xc8 load address 0x00005478
                 0x0000240c                PROVIDE (__bss_start, .)
  *(.bss .bss.*)
  .bss.SPIHandle
-                0x0000240c       0x1a ./SPI_Testing_Script.o
+                0x0000240c       0x20 ./SPI_Testing_Script.o
                 0x0000240c                SPIHandle
  .bss.driverSettings
-                0x00002426        0xe ./SPIHandler.o
-                0x00002426                driverSettings
- .bss.SPI       0x00002434        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
-                0x00002434                SPI
+                0x0000242c        0xe ./SPIHandler.o
+                0x0000242c                driverSettings
+ .bss.SPI       0x0000243a        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+                0x0000243a                SPI
  .bss.spiModule
-                0x00002436        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
-                0x00002436                spiModule
+                0x0000243c        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+                0x0000243c                spiModule
  .bss.stay_asleep
-                0x00002437        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x00002437                stay_asleep
- .bss.sleeping  0x00002438        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x00002438                sleeping
- *fill*         0x00002439        0x1 00
+                0x0000243d        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000243d                stay_asleep
+ .bss.sleeping  0x0000243e        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x0000243e                sleeping
+ *fill*         0x0000243f        0x1 00
  .bss.wdt_fract
-                0x0000243a        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000243a                wdt_fract
+                0x00002440        0x2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x00002440                wdt_fract
  .bss.wdt_millis
-                0x0000243c        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x0000243c                wdt_millis
+                0x00002442        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x00002442                wdt_millis
  .bss.wdt_overflow_count
-                0x00002440        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x00002440                wdt_overflow_count
- .bss.Serial1   0x00002444       0x1a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00002444                Serial1
- .bss.Serial    0x0000245e       0x1a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000245e                Serial
+                0x00002446        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x00002446                wdt_overflow_count
+ .bss.Serial1   0x0000244a       0x1a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000244a                Serial1
+ .bss.Serial    0x00002464       0x1a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00002464                Serial
  .bss.tx_buffer1
-                0x00002478       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x00002478                tx_buffer1
+                0x0000247e       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x0000247e                tx_buffer1
  .bss.rx_buffer1
-                0x0000248c       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x0000248c                rx_buffer1
+                0x00002492       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00002492                rx_buffer1
  .bss.tx_buffer
-                0x000024a0       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x000024a0                tx_buffer
+                0x000024a6       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000024a6                tx_buffer
  .bss.rx_buffer
-                0x000024b4       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
-                0x000024b4                rx_buffer
+                0x000024ba       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x000024ba                rx_buffer
  .bss.still_asleep
-                0x000024c8        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x000024ce        0x1 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
  *(COMMON)
- *fill*         0x000024c9        0x1 00
- COMMON         0x000024ca        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
-                0x000024ca                SMILLIS_INC
-                0x000024cc                SFRACT_INC
-                0x000024ce                . = ALIGN (0x2)
-                0x000024ce                PROVIDE (__bss_end, .)
-                0x000000c2                PROVIDE (__bss_size, SIZEOF (.bss))
+ *fill*         0x000024cf        0x1 00
+ COMMON         0x000024d0        0x4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x000024d0                SMILLIS_INC
+                0x000024d2                SFRACT_INC
+                0x000024d4                . = ALIGN (0x2)
+                0x000024d4                PROVIDE (__bss_end, .)
+                0x000000c8                PROVIDE (__bss_size, SIZEOF (.bss))
 
-.noinit         0x000024ce        0x2 load address 0x00005464
-                0x000024ce                PROVIDE (__noinit_start, .)
+.noinit         0x000024d4        0x2 load address 0x00005478
+                0x000024d4                PROVIDE (__noinit_start, .)
  *(.noinit .noinit.*)
- .noinit.crt0   0x000024ce        0x2 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
-                0x000024ce                __wdt_clear_value
-                0x000024d0                . = ALIGN (0x2)
-                0x000024d0                PROVIDE (__noinit_end, .)
-                0x000024d0                . = ALIGN (0x2)
-                0x000024d0                _end = .
+ .noinit.crt0   0x000024d4        0x2 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
+                0x000024d4                __wdt_clear_value
+                0x000024d6                . = ALIGN (0x2)
+                0x000024d6                PROVIDE (__noinit_end, .)
+                0x000024d6                . = ALIGN (0x2)
+                0x000024d6                _end = .
 
 .infomem        0x00001800        0x0
  *(.infomem)
@@ -1950,523 +1987,532 @@ LOAD c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x740
+.debug_aranges  0x00000000      0x774
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x1c ./SPI_Testing_Script.o
  .debug_aranges
-                0x0000001c       0x30 ./SPIHandler.o
+                0x0000001c       0x38 ./SPIHandler.o
  .debug_aranges
-                0x0000004c       0x1c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+                0x00000054       0x1c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
  .debug_aranges
-                0x00000068       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+                0x00000070       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
  .debug_aranges
-                0x000000a4       0x48 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+                0x000000ac       0x48 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
  .debug_aranges
-                0x000000ec       0x20 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+                0x000000f4       0x2c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
  .debug_aranges
-                0x0000010c       0x48 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+                0x00000120       0x20 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
  .debug_aranges
-                0x00000154       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+                0x00000140       0x48 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
  .debug_aranges
-                0x00000168       0x70 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+                0x00000188       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
  .debug_aranges
-                0x000001d8      0x148 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+                0x0000019c       0x70 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
  .debug_aranges
-                0x00000320       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+                0x0000020c      0x148 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
  .debug_aranges
-                0x00000334       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+                0x00000354       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
  .debug_aranges
-                0x00000348       0x20 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+                0x00000368       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
  .debug_aranges
-                0x00000368       0x38 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+                0x0000037c       0x20 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
  .debug_aranges
-                0x000003a0       0x30 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+                0x0000039c       0x38 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
  .debug_aranges
-                0x000003d0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+                0x000003d4       0x30 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
  .debug_aranges
-                0x000003e4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+                0x00000404       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
  .debug_aranges
-                0x000003f8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+                0x00000418       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
  .debug_aranges
-                0x0000040c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
+                0x0000042c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
  .debug_aranges
-                0x00000420       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
+                0x00000440       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
  .debug_aranges
-                0x00000434       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+                0x00000454       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
  .debug_aranges
-                0x00000448       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+                0x00000468       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
  .debug_aranges
-                0x0000045c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+                0x0000047c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
  .debug_aranges
-                0x00000470       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+                0x00000490       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
  .debug_aranges
-                0x00000484       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+                0x000004a4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
  .debug_aranges
-                0x00000498       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+                0x000004b8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
  .debug_aranges
-                0x000004ac       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+                0x000004cc       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
  .debug_aranges
-                0x000004c0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+                0x000004e0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
  .debug_aranges
-                0x000004d4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+                0x000004f4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
  .debug_aranges
-                0x000004e8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+                0x00000508       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
  .debug_aranges
-                0x000004fc       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+                0x0000051c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
  .debug_aranges
-                0x00000510       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+                0x00000530       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
  .debug_aranges
-                0x00000524       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+                0x00000544       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
  .debug_aranges
-                0x00000538       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+                0x00000558       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
  .debug_aranges
-                0x0000054c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+                0x0000056c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
  .debug_aranges
-                0x00000560       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+                0x00000580       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
  .debug_aranges
-                0x00000574       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+                0x00000594       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
  .debug_aranges
-                0x00000588       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+                0x000005a8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
  .debug_aranges
-                0x0000059c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+                0x000005bc       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
  .debug_aranges
-                0x000005b0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+                0x000005d0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
  .debug_aranges
-                0x000005c4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+                0x000005e4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
  .debug_aranges
-                0x000005d8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+                0x000005f8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
  .debug_aranges
-                0x000005ec       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+                0x0000060c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
  .debug_aranges
-                0x00000600       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+                0x00000620       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
  .debug_aranges
-                0x00000614       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+                0x00000634       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
  .debug_aranges
-                0x00000628       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+                0x00000648       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
  .debug_aranges
-                0x0000063c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+                0x0000065c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
  .debug_aranges
-                0x00000650       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+                0x00000670       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
  .debug_aranges
-                0x00000664       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+                0x00000684       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
  .debug_aranges
-                0x00000678       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
+                0x00000698       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
  .debug_aranges
-                0x0000068c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
+                0x000006ac       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
  .debug_aranges
-                0x000006a0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
+                0x000006c0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
  .debug_aranges
-                0x000006b4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
+                0x000006d4       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
  .debug_aranges
-                0x000006c8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
+                0x000006e8       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
  .debug_aranges
-                0x000006dc       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
+                0x000006fc       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
  .debug_aranges
-                0x000006f0       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
+                0x00000710       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
  .debug_aranges
-                0x00000704       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
+                0x00000724       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
  .debug_aranges
-                0x00000718       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
+                0x00000738       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
  .debug_aranges
-                0x0000072c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
+                0x0000074c       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
+ .debug_aranges
+                0x00000760       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xfb6a
+.debug_info     0x00000000    0x10960
  *(.debug_info)
- .debug_info    0x00000000      0x935 ./SPI_Testing_Script.o
- .debug_info    0x00000935      0xdcb ./SPIHandler.o
- .debug_info    0x00001700      0x78f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
- .debug_info    0x00001e8f      0x6b3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
- .debug_info    0x00002542      0x80f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_info    0x00002d51      0xa32 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_info    0x00003783     0x1fe4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_info    0x00005767      0x408 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_info    0x00005b6f     0x206c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_info    0x00007bdb     0x2b11 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_info    0x0000a6ec       0xd8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_info    0x0000a7c4      0x124 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_info    0x0000a8e8      0x221 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_info    0x0000ab09      0x56a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_info    0x0000b073      0x190 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_info    0x0000b203      0x5ea c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
- .debug_info    0x0000b7ed      0x1e4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
- .debug_info    0x0000b9d1      0x208 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
- .debug_info    0x0000bbd9       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
- .debug_info    0x0000bc7e       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
- .debug_info    0x0000bd23       0xb5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
- .debug_info    0x0000bdd8      0x425 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
- .debug_info    0x0000c1fd      0x3c9 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
- .debug_info    0x0000c5c6      0x35c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
- .debug_info    0x0000c922      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
- .debug_info    0x0000cb90      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
- .debug_info    0x0000cdfe      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
- .debug_info    0x0000d06c      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
- .debug_info    0x0000d2da      0x20b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
- .debug_info    0x0000d4e5      0x289 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
- .debug_info    0x0000d76e      0x144 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
- .debug_info    0x0000d8b2      0x206 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
- .debug_info    0x0000dab8      0x109 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
- .debug_info    0x0000dbc1      0x2b1 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
- .debug_info    0x0000de72      0x23e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
- .debug_info    0x0000e0b0      0x1d5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
- .debug_info    0x0000e285       0xa0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
- .debug_info    0x0000e325       0xa7 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
- .debug_info    0x0000e3cc       0xa4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
- .debug_info    0x0000e470       0xbb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
- .debug_info    0x0000e52b       0xb6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
- .debug_info    0x0000e5e1       0xe1 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
- .debug_info    0x0000e6c2      0x113 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
- .debug_info    0x0000e7d5      0x113 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
- .debug_info    0x0000e8e8       0xb7 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
- .debug_info    0x0000e99f       0xe0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
- .debug_info    0x0000ea7f       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
- .debug_info    0x0000eb14      0x14f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
- .debug_info    0x0000ec63      0x1d7 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
- .debug_info    0x0000ee3a      0x277 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
- .debug_info    0x0000f0b1      0x565 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
- .debug_info    0x0000f616       0x39 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
- .debug_info    0x0000f64f       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
- .debug_info    0x0000f6f4       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
- .debug_info    0x0000f799       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
- .debug_info    0x0000f83e       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
- .debug_info    0x0000f8b2       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
- .debug_info    0x0000f926       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
- .debug_info    0x0000f99a       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
- .debug_info    0x0000fa0e       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
- .debug_info    0x0000fa82       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
- .debug_info    0x0000faf6       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
+ .debug_info    0x00000000      0x97b ./SPI_Testing_Script.o
+ .debug_info    0x0000097b      0xf87 ./SPIHandler.o
+ .debug_info    0x00001902      0x78f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+ .debug_info    0x00002091      0x6b3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_info    0x00002744      0x80f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_info    0x00002f53      0xbf4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .debug_info    0x00003b47      0xa32 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_info    0x00004579     0x1fe4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_info    0x0000655d      0x408 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_info    0x00006965     0x206c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_info    0x000089d1     0x2b11 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_info    0x0000b4e2       0xd8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_info    0x0000b5ba      0x124 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_info    0x0000b6de      0x221 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_info    0x0000b8ff      0x56a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_info    0x0000be69      0x190 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_info    0x0000bff9      0x5ea c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+ .debug_info    0x0000c5e3      0x1e4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+ .debug_info    0x0000c7c7      0x208 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+ .debug_info    0x0000c9cf       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
+ .debug_info    0x0000ca74       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
+ .debug_info    0x0000cb19       0xb5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+ .debug_info    0x0000cbce      0x425 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_info    0x0000cff3      0x3c9 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_info    0x0000d3bc      0x35c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_info    0x0000d718      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+ .debug_info    0x0000d986      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+ .debug_info    0x0000dbf4      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+ .debug_info    0x0000de62      0x26e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+ .debug_info    0x0000e0d0      0x20b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+ .debug_info    0x0000e2db      0x289 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+ .debug_info    0x0000e564      0x144 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
+ .debug_info    0x0000e6a8      0x206 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_info    0x0000e8ae      0x109 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_info    0x0000e9b7      0x2b1 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+ .debug_info    0x0000ec68      0x23e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+ .debug_info    0x0000eea6      0x1d5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_info    0x0000f07b       0xa0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
+ .debug_info    0x0000f11b       0xa7 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+ .debug_info    0x0000f1c2       0xa4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+ .debug_info    0x0000f266       0xbb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+ .debug_info    0x0000f321       0xb6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+ .debug_info    0x0000f3d7       0xe1 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+ .debug_info    0x0000f4b8      0x113 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+ .debug_info    0x0000f5cb      0x113 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+ .debug_info    0x0000f6de       0xb7 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+ .debug_info    0x0000f795       0xe0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+ .debug_info    0x0000f875       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+ .debug_info    0x0000f90a      0x14f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_info    0x0000fa59      0x1d7 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+ .debug_info    0x0000fc30      0x277 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+ .debug_info    0x0000fea7      0x565 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_info    0x0001040c       0x39 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
+ .debug_info    0x00010445       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
+ .debug_info    0x000104ea       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
+ .debug_info    0x0001058f       0xa5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
+ .debug_info    0x00010634       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
+ .debug_info    0x000106a8       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
+ .debug_info    0x0001071c       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
+ .debug_info    0x00010790       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
+ .debug_info    0x00010804       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
+ .debug_info    0x00010878       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
+ .debug_info    0x000108ec       0x74 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000     0x402a
+.debug_abbrev   0x00000000     0x4276
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x27f ./SPI_Testing_Script.o
- .debug_abbrev  0x0000027f      0x310 ./SPIHandler.o
- .debug_abbrev  0x0000058f      0x1fc P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
- .debug_abbrev  0x0000078b      0x163 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
- .debug_abbrev  0x000008ee      0x1c3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_abbrev  0x00000ab1      0x16c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_abbrev  0x00000c1d      0x4c7 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_abbrev  0x000010e4       0x91 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_abbrev  0x00001175      0x39f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_abbrev  0x00001514      0x3a9 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_abbrev  0x000018bd       0x85 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_abbrev  0x00001942       0xc3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_abbrev  0x00001a05       0xaf P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_abbrev  0x00001ab4      0x107 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_abbrev  0x00001bbb       0xee P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_abbrev  0x00001ca9      0x140 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
- .debug_abbrev  0x00001de9       0xf4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
- .debug_abbrev  0x00001edd      0x14a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
- .debug_abbrev  0x00002027       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
- .debug_abbrev  0x0000203b       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
- .debug_abbrev  0x0000204f       0x5d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
- .debug_abbrev  0x000020ac      0x1ab c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
- .debug_abbrev  0x00002257      0x1d9 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
- .debug_abbrev  0x00002430      0x1c4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
- .debug_abbrev  0x000025f4      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
- .debug_abbrev  0x00002745      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
- .debug_abbrev  0x00002896      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
- .debug_abbrev  0x000029e7      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
- .debug_abbrev  0x00002b38      0x164 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
- .debug_abbrev  0x00002c9c      0x160 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
- .debug_abbrev  0x00002dfc       0xba c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
- .debug_abbrev  0x00002eb6      0x17a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
- .debug_abbrev  0x00003030       0xac c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
- .debug_abbrev  0x000030dc      0x192 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
- .debug_abbrev  0x0000326e      0x15a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
- .debug_abbrev  0x000033c8      0x10b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
- .debug_abbrev  0x000034d3       0x61 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
- .debug_abbrev  0x00003534       0x6f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
- .debug_abbrev  0x000035a3       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
- .debug_abbrev  0x00003603       0x7c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
- .debug_abbrev  0x0000367f       0x7e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
- .debug_abbrev  0x000036fd       0x94 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
- .debug_abbrev  0x00003791       0x97 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
- .debug_abbrev  0x00003828       0x97 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
- .debug_abbrev  0x000038bf       0x7e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
- .debug_abbrev  0x0000393d       0x8b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
- .debug_abbrev  0x000039c8       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
- .debug_abbrev  0x00003a28      0x104 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
- .debug_abbrev  0x00003b2c      0x112 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
- .debug_abbrev  0x00003c3e      0x105 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
- .debug_abbrev  0x00003d43      0x1ef c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
- .debug_abbrev  0x00003f32       0x30 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
- .debug_abbrev  0x00003f62       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
- .debug_abbrev  0x00003f76       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
- .debug_abbrev  0x00003f8a       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
- .debug_abbrev  0x00003f9e       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
- .debug_abbrev  0x00003fb2       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
- .debug_abbrev  0x00003fc6       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
- .debug_abbrev  0x00003fda       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
- .debug_abbrev  0x00003fee       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
- .debug_abbrev  0x00004002       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
- .debug_abbrev  0x00004016       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
+ .debug_abbrev  0x0000027f      0x335 ./SPIHandler.o
+ .debug_abbrev  0x000005b4      0x1fc P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+ .debug_abbrev  0x000007b0      0x163 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_abbrev  0x00000913      0x1c3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_abbrev  0x00000ad6      0x227 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .debug_abbrev  0x00000cfd      0x16c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_abbrev  0x00000e69      0x4c7 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_abbrev  0x00001330       0x91 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_abbrev  0x000013c1      0x39f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_abbrev  0x00001760      0x3a9 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_abbrev  0x00001b09       0x85 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_abbrev  0x00001b8e       0xc3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_abbrev  0x00001c51       0xaf P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_abbrev  0x00001d00      0x107 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_abbrev  0x00001e07       0xee P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_abbrev  0x00001ef5      0x140 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+ .debug_abbrev  0x00002035       0xf4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+ .debug_abbrev  0x00002129      0x14a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+ .debug_abbrev  0x00002273       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
+ .debug_abbrev  0x00002287       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
+ .debug_abbrev  0x0000229b       0x5d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+ .debug_abbrev  0x000022f8      0x1ab c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_abbrev  0x000024a3      0x1d9 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_abbrev  0x0000267c      0x1c4 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_abbrev  0x00002840      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+ .debug_abbrev  0x00002991      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+ .debug_abbrev  0x00002ae2      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+ .debug_abbrev  0x00002c33      0x151 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+ .debug_abbrev  0x00002d84      0x164 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+ .debug_abbrev  0x00002ee8      0x160 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+ .debug_abbrev  0x00003048       0xba c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
+ .debug_abbrev  0x00003102      0x17a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_abbrev  0x0000327c       0xac c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_abbrev  0x00003328      0x192 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+ .debug_abbrev  0x000034ba      0x15a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+ .debug_abbrev  0x00003614      0x10b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_abbrev  0x0000371f       0x61 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
+ .debug_abbrev  0x00003780       0x6f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+ .debug_abbrev  0x000037ef       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+ .debug_abbrev  0x0000384f       0x7c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+ .debug_abbrev  0x000038cb       0x7e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+ .debug_abbrev  0x00003949       0x94 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+ .debug_abbrev  0x000039dd       0x97 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+ .debug_abbrev  0x00003a74       0x97 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+ .debug_abbrev  0x00003b0b       0x7e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+ .debug_abbrev  0x00003b89       0x8b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+ .debug_abbrev  0x00003c14       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+ .debug_abbrev  0x00003c74      0x104 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_abbrev  0x00003d78      0x112 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+ .debug_abbrev  0x00003e8a      0x105 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+ .debug_abbrev  0x00003f8f      0x1ef c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_abbrev  0x0000417e       0x30 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
+ .debug_abbrev  0x000041ae       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
+ .debug_abbrev  0x000041c2       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
+ .debug_abbrev  0x000041d6       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
+ .debug_abbrev  0x000041ea       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
+ .debug_abbrev  0x000041fe       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
+ .debug_abbrev  0x00004212       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
+ .debug_abbrev  0x00004226       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
+ .debug_abbrev  0x0000423a       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
+ .debug_abbrev  0x0000424e       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
+ .debug_abbrev  0x00004262       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
 
-.debug_line     0x00000000     0x48a9
+.debug_line     0x00000000     0x4bca
  *(.debug_line)
  .debug_line    0x00000000      0x31f ./SPI_Testing_Script.o
- .debug_line    0x0000031f      0x3e7 ./SPIHandler.o
- .debug_line    0x00000706      0x24f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
- .debug_line    0x00000955      0x29f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
- .debug_line    0x00000bf4      0x32e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_line    0x00000f22      0x24a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_line    0x0000116c      0x3b4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_line    0x00001520      0x1a3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_line    0x000016c3      0x42a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_line    0x00001aed      0x813 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_line    0x00002300       0xea P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_line    0x000023ea      0x135 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_line    0x0000251f      0x104 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_line    0x00002623      0x271 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_line    0x00002894      0x17b P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_line    0x00002a0f      0x1c3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
- .debug_line    0x00002bd2       0x97 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
- .debug_line    0x00002c69       0xb5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
- .debug_line    0x00002d1e       0x7d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
- .debug_line    0x00002d9b       0x88 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
- .debug_line    0x00002e23       0x75 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
- .debug_line    0x00002e98      0x124 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
- .debug_line    0x00002fbc      0x11d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
- .debug_line    0x000030d9       0xdf c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
- .debug_line    0x000031b8       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
- .debug_line    0x0000324d       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
- .debug_line    0x000032e2       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
- .debug_line    0x00003377       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
- .debug_line    0x0000340c       0xad c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
- .debug_line    0x000034b9       0xa3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
- .debug_line    0x0000355c       0x78 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
- .debug_line    0x000035d4       0xac c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
- .debug_line    0x00003680       0x9f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
- .debug_line    0x0000371f       0xe5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
- .debug_line    0x00003804       0xc1 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
- .debug_line    0x000038c5       0xcc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
- .debug_line    0x00003991       0x61 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
- .debug_line    0x000039f2       0x44 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
- .debug_line    0x00003a36       0x49 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
- .debug_line    0x00003a7f       0x82 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
- .debug_line    0x00003b01       0x4d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
- .debug_line    0x00003b4e       0x85 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
- .debug_line    0x00003bd3       0xf6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
- .debug_line    0x00003cc9       0xf6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
- .debug_line    0x00003dbf       0x47 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
- .debug_line    0x00003e06       0x86 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
- .debug_line    0x00003e8c       0x3d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
- .debug_line    0x00003ec9       0xcd c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
- .debug_line    0x00003f96      0x10a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
- .debug_line    0x000040a0       0xa9 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
- .debug_line    0x00004149      0x2db c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
- .debug_line    0x00004424       0x31 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
- .debug_line    0x00004455       0x83 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
- .debug_line    0x000044d8       0x91 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
- .debug_line    0x00004569       0xb6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
- .debug_line    0x0000461f       0x5c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
- .debug_line    0x0000467b       0x5a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
- .debug_line    0x000046d5       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
- .debug_line    0x00004735       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
- .debug_line    0x00004795       0x5b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
- .debug_line    0x000047f0       0x5a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
- .debug_line    0x0000484a       0x5f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
+ .debug_line    0x0000031f      0x443 ./SPIHandler.o
+ .debug_line    0x00000762      0x24f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+ .debug_line    0x000009b1      0x29f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_line    0x00000c50      0x32e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_line    0x00000f7e      0x2c5 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .debug_line    0x00001243      0x24a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_line    0x0000148d      0x3b4 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_line    0x00001841      0x1a3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_line    0x000019e4      0x42a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_line    0x00001e0e      0x813 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_line    0x00002621       0xea P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_line    0x0000270b      0x135 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_line    0x00002840      0x104 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_line    0x00002944      0x271 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_line    0x00002bb5      0x17b P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_line    0x00002d30      0x1c3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+ .debug_line    0x00002ef3       0x97 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+ .debug_line    0x00002f8a       0xb5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+ .debug_line    0x0000303f       0x7d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod16.o)
+ .debug_line    0x000030bc       0x88 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod32.o)
+ .debug_line    0x00003144       0x75 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+ .debug_line    0x000031b9      0x124 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_line    0x000032dd      0x11d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_line    0x000033fa       0xdf c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_line    0x000034d9       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+ .debug_line    0x0000356e       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+ .debug_line    0x00003603       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+ .debug_line    0x00003698       0x95 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+ .debug_line    0x0000372d       0xad c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+ .debug_line    0x000037da       0xa3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+ .debug_line    0x0000387d       0x78 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
+ .debug_line    0x000038f5       0xac c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_line    0x000039a1       0x9f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_line    0x00003a40       0xe5 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+ .debug_line    0x00003b25       0xc1 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+ .debug_line    0x00003be6       0xcc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_line    0x00003cb2       0x61 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
+ .debug_line    0x00003d13       0x44 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+ .debug_line    0x00003d57       0x49 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+ .debug_line    0x00003da0       0x82 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+ .debug_line    0x00003e22       0x4d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+ .debug_line    0x00003e6f       0x85 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+ .debug_line    0x00003ef4       0xf6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+ .debug_line    0x00003fea       0xf6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+ .debug_line    0x000040e0       0x47 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+ .debug_line    0x00004127       0x86 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+ .debug_line    0x000041ad       0x3d c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+ .debug_line    0x000041ea       0xcd c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_line    0x000042b7      0x10a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+ .debug_line    0x000043c1       0xa9 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+ .debug_line    0x0000446a      0x2db c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_line    0x00004745       0x31 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
+ .debug_line    0x00004776       0x83 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mulsi3.o)
+ .debug_line    0x000047f9       0x91 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_divmod32.o)
+ .debug_line    0x0000488a       0xb6 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_udivmod64.o)
+ .debug_line    0x00004940       0x5c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__watchdog_support.o)
+ .debug_line    0x0000499c       0x5a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(__init_stack.o)
+ .debug_line    0x000049f6       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_copy_data.o)
+ .debug_line    0x00004a56       0x60 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_clear_bss.o)
+ .debug_line    0x00004ab6       0x5b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_endless_loop__.o)
+ .debug_line    0x00004b11       0x5a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_unexpected_.o)
+ .debug_line    0x00004b6b       0x5f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libcrt0.a(_ctors430.o)
 
-.debug_frame    0x00000000     0x15d8
+.debug_frame    0x00000000     0x1758
  *(.debug_frame)
  .debug_frame   0x00000000       0x4a ./SPI_Testing_Script.o
- .debug_frame   0x0000004a       0xc0 ./SPIHandler.o
- .debug_frame   0x0000010a       0x36 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
- .debug_frame   0x00000140       0x96 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
- .debug_frame   0x000001d6      0x142 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_frame   0x00000318       0x6a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_frame   0x00000382       0xda P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_frame   0x0000045c       0x1e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_frame   0x0000047a      0x242 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_frame   0x000006bc      0x6ca P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_frame   0x00000d86       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_frame   0x00000dc2       0x52 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_frame   0x00000e14       0x88 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_frame   0x00000e9c       0xca P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_frame   0x00000f66       0x72 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_frame   0x00000fd8       0x40 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
- .debug_frame   0x00001018       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
- .debug_frame   0x00001050       0x4c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
- .debug_frame   0x0000109c       0x26 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
- .debug_frame   0x000010c2       0x54 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
- .debug_frame   0x00001116       0x34 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
- .debug_frame   0x0000114a       0x2e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
- .debug_frame   0x00001178       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
- .debug_frame   0x0000119a       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
- .debug_frame   0x000011bc       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
- .debug_frame   0x000011de       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
- .debug_frame   0x00001200       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
- .debug_frame   0x00001228       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
- .debug_frame   0x0000124a       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
- .debug_frame   0x00001276       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
- .debug_frame   0x0000129e       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
- .debug_frame   0x000012ca       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
- .debug_frame   0x000012f2       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
- .debug_frame   0x00001316       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
- .debug_frame   0x00001334       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
- .debug_frame   0x00001352       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
- .debug_frame   0x00001376       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
- .debug_frame   0x00001394       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
- .debug_frame   0x000013b8       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
- .debug_frame   0x000013e4       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
- .debug_frame   0x00001410       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
- .debug_frame   0x00001434       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
- .debug_frame   0x00001460       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
- .debug_frame   0x0000147e       0x3e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
- .debug_frame   0x000014bc       0x34 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
- .debug_frame   0x000014f0       0x64 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
- .debug_frame   0x00001554       0x84 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_frame   0x0000004a       0xf4 ./SPIHandler.o
+ .debug_frame   0x0000013e       0x36 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+ .debug_frame   0x00000174       0x96 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_frame   0x0000020a      0x142 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_frame   0x0000034c      0x14c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .debug_frame   0x00000498       0x6a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_frame   0x00000502       0xda P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_frame   0x000005dc       0x1e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_frame   0x000005fa      0x242 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_frame   0x0000083c      0x6ca P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_frame   0x00000f06       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_frame   0x00000f42       0x52 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_frame   0x00000f94       0x88 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_frame   0x0000101c       0xca P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_frame   0x000010e6       0x72 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_frame   0x00001158       0x40 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+ .debug_frame   0x00001198       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+ .debug_frame   0x000011d0       0x4c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+ .debug_frame   0x0000121c       0x26 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+ .debug_frame   0x00001242       0x54 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_frame   0x00001296       0x34 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_frame   0x000012ca       0x2e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_frame   0x000012f8       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+ .debug_frame   0x0000131a       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+ .debug_frame   0x0000133c       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+ .debug_frame   0x0000135e       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+ .debug_frame   0x00001380       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+ .debug_frame   0x000013a8       0x22 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+ .debug_frame   0x000013ca       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_frame   0x000013f6       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_frame   0x0000141e       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+ .debug_frame   0x0000144a       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+ .debug_frame   0x00001472       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_frame   0x00001496       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+ .debug_frame   0x000014b4       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+ .debug_frame   0x000014d2       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+ .debug_frame   0x000014f6       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+ .debug_frame   0x00001514       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+ .debug_frame   0x00001538       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+ .debug_frame   0x00001564       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+ .debug_frame   0x00001590       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+ .debug_frame   0x000015b4       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+ .debug_frame   0x000015e0       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+ .debug_frame   0x000015fe       0x3e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_frame   0x0000163c       0x34 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+ .debug_frame   0x00001670       0x64 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+ .debug_frame   0x000016d4       0x84 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
 
-.debug_str      0x00000000     0x3546
+.debug_str      0x00000000     0x38d6
  *(.debug_str)
- .debug_str     0x00000000      0x783 ./SPI_Testing_Script.o
-                                0x81e (size before relaxing)
- .debug_str     0x00000783       0x63 ./SPIHandler.o
-                                0x7d4 (size before relaxing)
- .debug_str     0x000007e6       0xd7 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+ .debug_str     0x00000000      0x7bb ./SPI_Testing_Script.o
+                                0x856 (size before relaxing)
+ .debug_str     0x000007bb       0xac ./SPIHandler.o
+                                0x865 (size before relaxing)
+ .debug_str     0x00000867       0xd7 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
                                 0x64a (size before relaxing)
- .debug_str     0x000008bd      0x232 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_str     0x0000093e      0x232 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
                                 0x529 (size before relaxing)
- .debug_str     0x00000aef      0x287 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_str     0x00000b70      0x287 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
                                 0x548 (size before relaxing)
- .debug_str     0x00000d76      0x4f0 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_str     0x00000df7      0x6d3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+                                0xaa3 (size before relaxing)
+ .debug_str     0x000014ca      0x131 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
                                 0x749 (size before relaxing)
- .debug_str     0x00001266     0x104d P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_str     0x000015fb     0x104d P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
                                0x13c2 (size before relaxing)
- .debug_str     0x000022b3       0x69 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_str     0x00002648       0x69 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
                                 0x2e4 (size before relaxing)
- .debug_str     0x0000231c      0x3fa P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_str     0x000026b1      0x3fa P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
                                 0xfc3 (size before relaxing)
- .debug_str     0x00002716      0x26f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_str     0x00002aab      0x26f P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
                                 0xcba (size before relaxing)
- .debug_str     0x00002985       0x7e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_str     0x00002d1a       0x7e P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
                                  0xe1 (size before relaxing)
- .debug_str     0x00002a03       0x8a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_str     0x00002d98       0x8a P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
                                 0x172 (size before relaxing)
- .debug_str     0x00002a8d       0x78 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_str     0x00002e22       0x78 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
                                 0x14d (size before relaxing)
- .debug_str     0x00002b05      0x134 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_str     0x00002e9a      0x134 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
                                 0x3e4 (size before relaxing)
- .debug_str     0x00002c39       0xd2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_str     0x00002fce       0xd2 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
                                 0x1de (size before relaxing)
- .debug_str     0x00002d0b       0xcc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+ .debug_str     0x000030a0       0xcc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
                                 0x197 (size before relaxing)
- .debug_str     0x00002dd7       0x2f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+ .debug_str     0x0000316c       0x2f c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
                                 0x15a (size before relaxing)
- .debug_str     0x00002e06       0x26 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+ .debug_str     0x0000319b       0x26 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
                                 0x152 (size before relaxing)
- .debug_str     0x00002e2c       0x9e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+ .debug_str     0x000031c1       0x9e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
                                 0x156 (size before relaxing)
- .debug_str     0x00002eca      0x143 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_str     0x0000325f      0x143 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
                                 0x250 (size before relaxing)
- .debug_str     0x0000300d       0x27 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_str     0x000033a2       0x27 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
                                 0x209 (size before relaxing)
- .debug_str     0x00003034       0x35 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_str     0x000033c9       0x35 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
                                 0x212 (size before relaxing)
- .debug_str     0x00003069        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+ .debug_str     0x000033fe        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
                                 0x1d7 (size before relaxing)
- .debug_str     0x00003071        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+ .debug_str     0x00003406        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
                                 0x1d7 (size before relaxing)
- .debug_str     0x00003079        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+ .debug_str     0x0000340e        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
                                 0x1d7 (size before relaxing)
- .debug_str     0x00003081        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+ .debug_str     0x00003416        0x8 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
                                 0x1d7 (size before relaxing)
- .debug_str     0x00003089       0x27 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+ .debug_str     0x0000341e       0x27 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
                                 0x1c6 (size before relaxing)
- .debug_str     0x000030b0        0xa c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+ .debug_str     0x00003445        0xa c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
                                 0x1e0 (size before relaxing)
  .debug_str     0x00000000      0x182 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_thenan_sf.o)
- .debug_str     0x000030ba        0xe c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_str     0x0000344f        0xe c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
                                 0x1c2 (size before relaxing)
- .debug_str     0x000030c8       0x17 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_str     0x0000345d       0x17 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
                                 0x162 (size before relaxing)
- .debug_str     0x000030df       0x10 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+ .debug_str     0x00003474       0x10 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
                                 0x1df (size before relaxing)
- .debug_str     0x000030ef        0xb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+ .debug_str     0x00003484        0xb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
                                 0x1c1 (size before relaxing)
- .debug_str     0x000030fa       0x10 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_str     0x0000348f       0x10 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
                                 0x1a5 (size before relaxing)
  .debug_str     0x00000000      0x145 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clz.o)
- .debug_str     0x0000310a       0x19 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+ .debug_str     0x0000349f       0x19 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
                                  0xfd (size before relaxing)
- .debug_str     0x00003123       0x19 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+ .debug_str     0x000034b8       0x19 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
                                  0xfd (size before relaxing)
- .debug_str     0x0000313c       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+ .debug_str     0x000034d1       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
                                 0x106 (size before relaxing)
- .debug_str     0x00003157       0x23 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+ .debug_str     0x000034ec       0x1e c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
                                 0x107 (size before relaxing)
- .debug_str     0x0000317a       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+ .debug_str     0x0000350a       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
                                 0x106 (size before relaxing)
- .debug_str     0x00003195       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+ .debug_str     0x00003525       0x28 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
                                 0x11f (size before relaxing)
- .debug_str     0x000031bd       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+ .debug_str     0x0000354d       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
                                 0x121 (size before relaxing)
- .debug_str     0x000031d8       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+ .debug_str     0x00003568       0x1b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
                                 0x104 (size before relaxing)
- .debug_str     0x000031f3       0x19 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+ .debug_str     0x00003583       0x19 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
                                 0x109 (size before relaxing)
- .debug_str     0x0000320c       0x15 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+ .debug_str     0x0000359c       0x15 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
                                  0xf9 (size before relaxing)
- .debug_str     0x00003221       0x55 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_str     0x000035b1       0x55 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
                                 0x145 (size before relaxing)
- .debug_str     0x00003276       0x47 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+ .debug_str     0x00003606       0x47 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
                                 0x138 (size before relaxing)
- .debug_str     0x000032bd       0x85 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+ .debug_str     0x0000364d       0x85 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
                                 0x198 (size before relaxing)
- .debug_str     0x00003342      0x1f3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_str     0x000036d2      0x1f3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
                                 0x37e (size before relaxing)
- .debug_str     0x00003535       0x11 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
+ .debug_str     0x000038c5       0x11 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(errno.o)
                                  0x7c (size before relaxing)
 
-.debug_loc      0x00000000     0x41f8
+.debug_loc      0x00000000     0x434e
  *(.debug_loc)
  .debug_loc     0x00000000       0x12 ./SPI_Testing_Script.o
- .debug_loc     0x00000012       0xab ./SPIHandler.o
- .debug_loc     0x000000bd       0xa3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
- .debug_loc     0x00000160      0x102 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_loc     0x00000262      0x22c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_loc     0x0000048e      0x121 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_loc     0x000005af      0x6ad P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_loc     0x00000c5c      0xe85 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_loc     0x00001ae1      0x129 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_loc     0x00001c0a       0x52 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_loc     0x00001c5c      0x233 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_loc     0x00001e8f       0x37 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_loc     0x00001ec6      0x6a3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
- .debug_loc     0x00002569      0x159 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
- .debug_loc     0x000026c2      0x17c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
- .debug_loc     0x0000283e       0x30 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
- .debug_loc     0x0000286e      0x28b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
- .debug_loc     0x00002af9      0x204 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
- .debug_loc     0x00002cfd       0xf0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
- .debug_loc     0x00002ded       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
- .debug_loc     0x00002e29       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
- .debug_loc     0x00002e65       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
- .debug_loc     0x00002ea1       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
- .debug_loc     0x00002edd       0x9a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
- .debug_loc     0x00002f77       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
- .debug_loc     0x00002fb3       0x66 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
- .debug_loc     0x00003019       0x70 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
- .debug_loc     0x00003089      0x154 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
- .debug_loc     0x000031dd       0x72 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
- .debug_loc     0x0000324f       0x5b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
- .debug_loc     0x000032aa        0xb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
- .debug_loc     0x000032b5       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
- .debug_loc     0x000032d9       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
- .debug_loc     0x00003311       0x12 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
- .debug_loc     0x00003323       0x45 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
- .debug_loc     0x00003368      0x1d0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
- .debug_loc     0x00003538      0x1d0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
- .debug_loc     0x00003708       0x39 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
- .debug_loc     0x00003741       0x89 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
- .debug_loc     0x000037ca        0xb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
- .debug_loc     0x000037d5       0xeb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
- .debug_loc     0x000038c0      0x1be c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
- .debug_loc     0x00003a7e       0xe3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
- .debug_loc     0x00003b61      0x697 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_loc     0x00000012       0xf4 ./SPIHandler.o
+ .debug_loc     0x00000106       0xa3 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_loc     0x000001a9      0x102 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_loc     0x000002ab      0x10d P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .debug_loc     0x000003b8      0x22c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_loc     0x000005e4      0x121 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_loc     0x00000705      0x6ad P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_loc     0x00000db2      0xe85 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_loc     0x00001c37      0x129 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_loc     0x00001d60       0x52 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_loc     0x00001db2      0x233 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_loc     0x00001fe5       0x37 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_loc     0x0000201c      0x6a3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_pow.o)
+ .debug_loc     0x000026bf      0x159 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(sf_scalbn.o)
+ .debug_loc     0x00002818      0x17c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libm.a(ef_sqrt.o)
+ .debug_loc     0x00002994       0x30 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fixunssfsi.o)
+ .debug_loc     0x000029c4      0x28b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_loc     0x00002c4f      0x204 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_loc     0x00002e53       0xf0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_loc     0x00002f43       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_gt_sf.o)
+ .debug_loc     0x00002f7f       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_ge_sf.o)
+ .debug_loc     0x00002fbb       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_lt_sf.o)
+ .debug_loc     0x00002ff7       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_le_sf.o)
+ .debug_loc     0x00003033       0x9a c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_si_to_sf.o)
+ .debug_loc     0x000030cd       0x3c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_sf_to_si.o)
+ .debug_loc     0x00003109       0x66 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_loc     0x0000316f       0x70 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_loc     0x000031df      0x154 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_pack_sf.o)
+ .debug_loc     0x00003333       0x72 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_unpack_sf.o)
+ .debug_loc     0x000033a5       0x5b c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_fpcmp_parts_sf.o)
+ .debug_loc     0x00003400        0xb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strchr.o)
+ .debug_loc     0x0000340b       0x24 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcmp.o)
+ .debug_loc     0x0000342f       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncmp.o)
+ .debug_loc     0x00003467       0x12 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strcpy.o)
+ .debug_loc     0x00003479       0x45 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strncpy.o)
+ .debug_loc     0x000034be      0x1d0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memcpy.o)
+ .debug_loc     0x0000368e      0x1d0 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(memmove.o)
+ .debug_loc     0x0000385e       0x39 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strrchr.o)
+ .debug_loc     0x00003897       0x89 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strstr.o)
+ .debug_loc     0x00003920        0xb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(atol.o)
+ .debug_loc     0x0000392b       0xeb c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_loc     0x00003a16      0x1be c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(strtol.o)
+ .debug_loc     0x00003bd4       0xe3 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(sprintf.o)
+ .debug_loc     0x00003cb7      0x697 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2474,31 +2520,32 @@ LOAD c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x3f4
+.debug_ranges   0x00000000      0x41c
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 ./SPI_Testing_Script.o
- .debug_ranges  0x00000010       0x24 ./SPIHandler.o
- .debug_ranges  0x00000034       0x10 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
- .debug_ranges  0x00000044       0x30 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
- .debug_ranges  0x00000074       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
- .debug_ranges  0x000000b0       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
- .debug_ranges  0x000000c4       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
- .debug_ranges  0x00000100        0x8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
- .debug_ranges  0x00000108       0x70 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
- .debug_ranges  0x00000178      0x154 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
- .debug_ranges  0x000002cc        0x8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
- .debug_ranges  0x000002d4        0x8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
- .debug_ranges  0x000002dc       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
- .debug_ranges  0x000002f0       0x2c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
- .debug_ranges  0x0000031c       0x24 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
- .debug_ranges  0x00000340       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
- .debug_ranges  0x00000354       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
- .debug_ranges  0x0000038c       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
- .debug_ranges  0x000003b8        0xc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
- .debug_ranges  0x000003c4        0xc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
- .debug_ranges  0x000003d0        0xc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
- .debug_ranges  0x000003dc       0x18 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
+ .debug_ranges  0x00000010       0x2c ./SPIHandler.o
+ .debug_ranges  0x0000003c       0x10 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(SPI.o)
+ .debug_ranges  0x0000004c       0x30 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_SPI/Debug\libmsp430_MSP-EXP430F5529LP_SPI.a(usci_spi.o)
+ .debug_ranges  0x0000007c       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring.o)
+ .debug_ranges  0x000000b8       0x20 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_analog.o)
+ .debug_ranges  0x000000d8       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(wiring_digital.o)
+ .debug_ranges  0x000000ec       0x3c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(HardwareSerial.o)
+ .debug_ranges  0x00000128        0x8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(main.o)
+ .debug_ranges  0x00000130       0x70 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(Print.o)
+ .debug_ranges  0x000001a0      0x154 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(WString.o)
+ .debug_ranges  0x000002f4        0x8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(atof.o)
+ .debug_ranges  0x000002fc        0x8 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(dtostrf.o)
+ .debug_ranges  0x00000304       0x14 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(itoa.o)
+ .debug_ranges  0x00000318       0x2c P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(usci_isr_handler.o)
+ .debug_ranges  0x00000344       0x24 P:/Uoe/BLDC-Controller-Testing/msp430_MSP-EXP430F5529LP_core/Debug\libmsp430_MSP-EXP430F5529LP_core.a(new.o)
+ .debug_ranges  0x00000368       0x14 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_addsub_sf.o)
+ .debug_ranges  0x0000037c       0x38 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_mul_sf.o)
+ .debug_ranges  0x000003b4       0x2c c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_div_sf.o)
+ .debug_ranges  0x000003e0        0xc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_usi_to_sf.o)
+ .debug_ranges  0x000003ec        0xc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16\libgcc.a(_clzsi2.o)
+ .debug_ranges  0x000003f8        0xc c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(malloc.o)
+ .debug_ranges  0x00000404       0x18 c:/users/squir/appdata/local/energia15/packages/energia/tools/msp430-gcc/4.6.6/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16\libc.a(vuprintf.o)
                 0x00004400                PROVIDE (__stack, (ORIGIN (ram) + 0x2000))
-                0x00005458                PROVIDE (__data_start_rom, _etext)
-                0x00005464                PROVIDE (__data_end_rom, (_etext + SIZEOF (.data)))
+                0x0000546c                PROVIDE (__data_start_rom, _etext)
+                0x00005478                PROVIDE (__data_end_rom, (_etext + SIZEOF (.data)))
 OUTPUT(SPI_Testing_Script.out elf32-msp430)

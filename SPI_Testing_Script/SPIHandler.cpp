@@ -14,7 +14,6 @@
 /*TODO:
  * -Change tempter select pin toggling over to using declarations from msp430f5529.h to make the code more portable
  * -Figure out good way to handle the coast functionality in the driver
- * -Write method for the current sense resistor functions (gain, etc...)
  */
 
 
@@ -31,6 +30,7 @@ int _EXTSPIEN = 18;
 int _CSTemp = 32;
 int _CSSD = 11;
 int _CSDRV = 8;
+int _SOA = 23;
 
 //Variables representing memory of Driver chip
 uint16_t _faultStatus1 = 0x0000;
@@ -194,3 +194,60 @@ void SPIHandler::clearFault(){
     driverSettings[2] = driverSettings[2] & 0xFFFE;
 }
 
+//Sets the current amplifier gain in the controller:
+//Avaliable gains are 5, 10, 20, and 40 V/v
+void SPIHandler::setAmpGain(int gain){
+    switch(gain){
+        case 5:
+            driverSettings[6] = driverSettings[6] & 0xFF3F; // This sets the gain bits to 0b00
+        case 10:
+            driverSettings[6] = driverSettings[6] & 0xFF3F;
+            driverSettings[6] = driverSettings[6] | 0x0040; // Sets the gain bits to 0b01
+        case 20:
+            driverSettings[6] = driverSettings[6] & 0xFF3F;
+            driverSettings[6] = driverSettings[6] | 0x0080; // Sets the gain bits to 0b10
+        case 40:
+            driverSettings[6] = driverSettings[6] & 0xFF3F;
+            driverSettings[6] = driverSettings[6] | 0x00C0; // Sets the gain bits to 0b11
+    }
+    driverSettings[6] = driverSettings[6] & 0x07FF; //Clears the address and R/W bit
+    driverSettings[6] = driverSettings[6] | 0x3000; //Sets the correct address and R/W bit
+    char firstByte = (driverSettings[6] & 0xFF00) > 8; //Split the 16 bit data into two bytes and then write both
+    char secondByte = driverSettings[6] & 0x00FF;
+    P2OUT = P2OUT & 0x7F;
+    SPI.transfer(firstByte);
+    SPI.transfer(secondByte);
+    P2OUT = P2OUT | 0x80;
+}
+
+//Calibrates the gain amplifier. Note that this puts the driver into coast mode
+uint16_t * calibrateDriver(){
+    uint16_t zeroValues[3];
+    //Set the driver to coast and then pull down the short pin
+    driverSettings[2] |= 0x0004;
+    driverSettings[2] = driverSettings[2] | 0x0001;
+    driverSettings[2] = driverSettings[2] | 0x1000; //Set write and address bit
+    char firstByte = (driverSettings[2] & 0xFF00) > 8; //Split the 16 bit data into two bytes and then write both
+    char secondByte = driverSettings[2] & 0x00FF;
+    P2OUT = P2OUT & 0x7F;
+    SPI.transfer(firstByte);
+    SPI.transfer(secondByte);
+    P2OUT |= 0x80;
+    P6DIR |= 0x20; //Set direction of IO bank 6 for cal pin
+    P6OUT |= 0x20; //Set the cal pin to High
+    for(int i = 0; i < 3; i++ ){ //Read in the zero values
+        zeroValues[i] = analogRead(23+i);
+    }
+    P6OUT &= 0xDF; //Set the cal pin back to low
+    //Pull the driver out of coast mode
+    driverSettings[2] &= 0xFFFB;
+    driverSettings[2] = driverSettings[2] | 0x0001;
+    driverSettings[2] = driverSettings[2] | 0x1000; //Set write and address bit
+    firstByte = (driverSettings[2] & 0xFF00) > 8; //Split the 16 bit data into two bytes and then write both
+    secondByte = driverSettings[2] & 0x00FF;
+    P2OUT = P2OUT & 0x7F;
+    SPI.transfer(firstByte);
+    SPI.transfer(secondByte);
+    P2OUT |= 0x80;
+    return zeroValues;
+}

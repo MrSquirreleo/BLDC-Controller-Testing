@@ -26,6 +26,7 @@ class SPIHandler
 		void readDriverChip();
 		void setDriverMode3();
 		void clearFault();
+		void setAmpGain(int gain);
 		uint16_t * currentSettings(bool refresh);
 		uint16_t * getFaultRegisters();
 	private:
@@ -33,6 +34,9 @@ class SPIHandler
 		int _CSTemp;
 		int _CSSD;
 		int _CSDRV;
+		int _SOA;
+		int _SOB;
+		int _SOC;
 		unsigned char* _pP3OUT;
 		unsigned char* _pP3DIR;
 		uint16_t _faultStatus1;
